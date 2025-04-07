@@ -86,3 +86,36 @@ textarea:not([rows]) {
 /* End CSS Reset */
 
 /* Start Global Styles */
+
+:root {
+  /* Color Variables */
+  --red: #ff6257;
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+
+  /* Font Weight Variables */
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "main illustration";
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  .illustration {
+    grid-area: illustration;
+  }
+}
