@@ -227,10 +227,6 @@ button:hover {
   flex-direction: column;
 }
 
-.success-message::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .success-message img {
   align-self: flex-start;
   margin-bottom: 0.8rem;
