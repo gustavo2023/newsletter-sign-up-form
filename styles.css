@@ -225,8 +225,6 @@ button:hover {
   border: none;
   display: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .success-message::backdrop {
