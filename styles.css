@@ -108,7 +108,7 @@ body {
   align-items: center;
 }
 
-.container {
+.newsletter-container {
   background-color: white;
   max-width: 60rem;
   width: 100%;
@@ -246,7 +246,7 @@ h2 {
 }
 
 @media (min-width: 48rem) {
-  .container {
+  .newsletter-container {
     grid-template-columns: 1.4fr 1fr;
     grid-template-areas: "main illustration";
     padding: 1.5rem;
