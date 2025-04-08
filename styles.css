@@ -121,7 +121,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 2rem;
   gap: 1rem;
 }
 
@@ -192,6 +192,12 @@ input:focus {
   border-color: var(--blue-800);
 }
 
+.error {
+  border-color: var(--red);
+  background-color: #fab0ab;
+  color: var(--red);
+}
+
 button {
   width: 100%;
   padding: 1.3rem;
@@ -219,6 +225,7 @@ button:hover {
 
   main {
     grid-area: main;
+    padding: 3rem;
   }
 
   .illustration {
