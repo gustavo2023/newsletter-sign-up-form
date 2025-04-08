@@ -180,7 +180,7 @@ form div {
 
 input {
   width: 100%;
-  padding: 1rem;
+  padding: 1.3rem;
   border: 1px solid var(--grey);
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -190,6 +190,22 @@ input {
 input:focus {
   outline: none;
   border-color: var(--blue-800);
+}
+
+button {
+  width: 100%;
+  padding: 1.3rem;
+  background-color: var(--blue-800);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: var(--fw-700);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--blue-700);
 }
 
 @media (min-width: 48rem) {
