@@ -28,7 +28,7 @@ const handleFormSubmit = (e) => {
 
   userEmailSpan.textContent = emailValue;
   newsletterContainer.style.display = "none";
-  successMessage.showModal();
+  successMessage.style.display = "flex";
 };
 
 const validateEmail = (email) => {
@@ -41,7 +41,7 @@ const validateEmail = (email) => {
 };
 
 dismissBtn.addEventListener("click", () => {
-  successMessage.close();
+  successMessage.style.display = "none";
   newsletterContainer.style.display = "grid";
 });
 
