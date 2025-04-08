@@ -1,4 +1,3 @@
-const newsletterContainer = document.querySelector(".newsletter-container");
 const form = document.getElementById("form");
 const emailInput = document.getElementById("email");
 const errorMessage = document.querySelector(".error-message");
