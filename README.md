@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Link to Challenge solution](https://www.frontendmentor.io/solutions/newsletter-sign-up-form-with-success-message-uW7kvzJdoB)
 - Live Site URL: [Newsletter Sign-up Form](https://gustavo2023.github.io/newsletter-sign-up-form/)
 
 ## My process
