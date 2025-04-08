@@ -194,7 +194,7 @@ input:focus {
 
 .error {
   border-color: var(--red);
-  background-color: #fab0ab;
+  background-color: #ffe8e6;
   color: var(--red);
 }
 
