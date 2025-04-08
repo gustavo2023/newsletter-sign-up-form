@@ -93,6 +93,7 @@ textarea:not([rows]) {
   --blue-800: #242742;
   --blue-700: #36384e;
   --grey: #949494;
+  --gradient: linear-gradient(#ff6a3a, #ff527b);
 
   /* Font Weight Variables */
   --fw-400: 400;
@@ -211,7 +212,8 @@ button {
 }
 
 button:hover {
-  background-color: var(--blue-700);
+  background: var(--gradient);
+  box-shadow: 0 4px 8px rgba(49, 27, 27, 0.2);
 }
 
 .success-message {
