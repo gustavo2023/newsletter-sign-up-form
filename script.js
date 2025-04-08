@@ -1,3 +1,4 @@
+const newsletterContainer = document.querySelector(".newsletter-container");
 const form = document.getElementById("form");
 const emailInput = document.getElementById("email");
 const errorMessage = document.querySelector(".error-message");
@@ -26,6 +27,7 @@ const handleFormSubmit = (e) => {
   emailInput.value = "";
 
   userEmailSpan.textContent = emailValue;
+  newsletterContainer.style.display = "none";
   successMessage.showModal();
 };
 
@@ -40,6 +42,7 @@ const validateEmail = (email) => {
 
 dismissBtn.addEventListener("click", () => {
   successMessage.close();
+  newsletterContainer.style.display = "grid";
 });
 
 form.addEventListener("submit", handleFormSubmit);
