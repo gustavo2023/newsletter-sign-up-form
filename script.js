@@ -4,6 +4,8 @@ const emailInput = document.getElementById("email");
 const errorMessage = document.querySelector(".error-message");
 const submitBtn = document.getElementById("submit");
 const successMessage = document.querySelector(".success-message");
+const userEmailSpan = document.querySelector(".user-email");
+const dismissBtn = document.querySelector(".dismiss-btn");
 
 const handleFormSubmit = (e) => {
   e.preventDefault(e);
@@ -18,6 +20,14 @@ const handleFormSubmit = (e) => {
     emailInput.classList.add("error");
     return;
   }
+
+  errorMessage.style.display = "none";
+  emailInput.setAttribute("aria-invalid", "false");
+  emailInput.classList.remove("error");
+  emailInput.value = "";
+
+  userEmailSpan.textContent = emailValue;
+  successMessage.showModal();
 };
 
 const validateEmail = (email) => {
@@ -28,5 +38,9 @@ const validateEmail = (email) => {
 
   return "";
 };
+
+dismissBtn.addEventListener("click", () => {
+  successMessage.close();
+});
 
 form.addEventListener("submit", handleFormSubmit);
