@@ -14,6 +14,7 @@ const handleFormSubmit = (e) => {
   if (error) {
     errorMessage.textContent = error;
     errorMessage.style.display = "flex";
+    emailInput.setAttribute("aria-invalid", "true");
     emailInput.classList.add("error");
     return;
   }
