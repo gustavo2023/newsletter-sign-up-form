@@ -7,28 +7,44 @@ const successMessage = document.querySelector(".success-message");
 const userEmailSpan = document.querySelector(".user-email");
 const dismissBtn = document.querySelector(".dismiss-btn");
 
+const showElement = (element, displayStyle = "flex") => {
+  element.style.display = displayStyle;
+};
+
+const hideElement = (element) => {
+  element.style.display = "none";
+};
+
+const setEmailErrorState = (message) => {
+  errorMessage.textContent = message;
+  showElement(errorMessage);
+  emailInput.setAttribute("aria-invalid", "true");
+  emailInput.classList.add("error");
+};
+
+const clearEmailErrorState = () => {
+  hideElement(errorMessage);
+  emailInput.setAttribute("aria-invalid", "false");
+  emailInput.classList.remove("error");
+};
+
 const handleFormSubmit = (e) => {
-  e.preventDefault(e);
+  e.preventDefault();
 
   const emailValue = emailInput.value.trim();
   const error = validateEmail(emailValue);
 
   if (error) {
-    errorMessage.textContent = error;
-    errorMessage.style.display = "flex";
-    emailInput.setAttribute("aria-invalid", "true");
-    emailInput.classList.add("error");
+    setEmailErrorState(error);
     return;
   }
 
-  errorMessage.style.display = "none";
-  emailInput.setAttribute("aria-invalid", "false");
-  emailInput.classList.remove("error");
+  clearEmailErrorState();
   emailInput.value = "";
 
   userEmailSpan.textContent = emailValue;
-  newsletterContainer.style.display = "none";
-  successMessage.style.display = "flex";
+  hideElement(newsletterContainer);
+  showElement(successMessage);
 };
 
 const validateEmail = (email) => {
@@ -41,8 +57,8 @@ const validateEmail = (email) => {
 };
 
 dismissBtn.addEventListener("click", () => {
-  successMessage.style.display = "none";
-  newsletterContainer.style.display = "grid";
+  hideElement(successMessage);
+  showElement(newsletterContainer, "grid");
 });
 
 form.addEventListener("submit", handleFormSubmit);
